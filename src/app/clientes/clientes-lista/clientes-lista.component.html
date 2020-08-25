@@ -29,10 +29,23 @@
                         <td>{{cliente.nome}}</td>
                         <td>{{cliente.cpf}}</td>
                         <td>{{cliente.dataCadastro}}</td>
-                        <th></th>
+                        <th>
+                            <button class="btn btn-primary" routerLink="/clientes-form/{{ cliente.id }}">
+                                <i class="fa fa-edit"></i>
+                            </button>
+
+                            <button class="btn btn-danger ml-1">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </th>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
+
+     <div id="modalDelecao">
+          
+     </div>
+
 </div>
