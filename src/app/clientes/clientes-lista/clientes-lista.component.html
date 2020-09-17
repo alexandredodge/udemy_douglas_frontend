@@ -3,6 +3,18 @@
     <li class="breadcrumb-item active">Consulta</li>
 </ol>
 <div class="container">
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-success" role="alert" *ngIf="msgSucesso">
+                {{ msgSucesso }}
+            </div>
+            <div class="alert alert-danger" role="alert" *ngIf="msgErro">
+                {{ msgErro }}
+            </div>
+        </div>
+    </div>
+
     <div class="row">
         <div class="col-md-2">
             <button class="btn btn-warning " (click)="novoCadastro()" >
@@ -32,7 +44,7 @@
                         <th>
                             <button class="btn btn-primary" routerLink="/clientes-form/{{ cliente.id }}">
                                 <i class="fa fa-edit"></i>
-                            </button>
+                            </button>   
 
                             <button class="btn btn-danger ml-1" (click)="preparaDelecao(cliente)" data-toggle="modal" data-target="#modalDelecao">
                                 <i class="fa fa-trash"></i>
