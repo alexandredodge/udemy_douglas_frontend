@@ -9,7 +9,7 @@ import { ServicoPrestado } from './servico-prestado/ServicoPrestado';
 })
 export class ServicoPrestadoService {
 
-  apiUrl = environment.apiUrl;
+  apiUrl = environment.apiUrlBase;
 
   constructor(private http: HttpClient) { }
 
