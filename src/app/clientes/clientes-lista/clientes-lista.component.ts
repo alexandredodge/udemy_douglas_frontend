@@ -21,7 +21,7 @@ export class ClientesListaComponent implements OnInit {
       private router:Router) {}
 
   ngOnInit(): void {
-    this.service.getClientes().subscribe( resposta => this.clientes = resposta );
+    this.service.buscarTodosClientes().subscribe( resposta => this.clientes = resposta );
   }
 
   novoCadastro(){
